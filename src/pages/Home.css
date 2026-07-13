@@ -1,0 +1,131 @@
+.hero {
+  background: var(--cream);
+  padding: 90px 0 110px;
+  position: relative;
+}
+
+/* the big soft background word - sits behind everything else */
+.hero-bigword {
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  font-size: 220px;
+  line-height: 1;
+  opacity: 0.35;
+  z-index: 0;
+  transform: rotate(-4deg);
+  pointer-events: none;
+}
+
+.hero-sparkle {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  width: 34px;
+  height: 34px;
+  z-index: 1;
+}
+
+.hero-lily {
+  position: absolute;
+  bottom: -30px;
+  right: -20px;
+  width: 220px;
+  height: 220px;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 580px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  font-style: italic;
+}
+
+.hero-text {
+  font-size: 18px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.welcome {
+  background: var(--sage);
+  background: linear-gradient(180deg, var(--cream) 0%, #EDE9DA 100%);
+}
+
+.welcome-row {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.welcome-label h2 {
+  margin: 0;
+  font-style: italic;
+}
+
+.welcome-text {
+  font-size: 19px;
+  font-style: italic;
+  color: var(--wine);
+  margin: 0;
+  padding-left: 20px;
+  border-left: 3px solid var(--rose);
+}
+
+.features {
+  background: var(--cream);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.feature-card {
+  border-top: 3px solid var(--rose);
+  padding: 22px 0 0 0;
+}
+
+.feature-card:nth-child(2) { border-top-color: var(--sage-dark); }
+.feature-card:nth-child(3) { border-top-color: var(--wine); }
+
+.feature-number {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--rose-deep);
+  margin-bottom: 10px;
+}
+
+.feature-card h3 {
+  font-size: 19px;
+}
+
+.feature-card p {
+  font-size: 15px;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .hero { padding: 70px 0 90px; }
+  .hero-bigword { font-size: 120px; top: -10px; }
+  .hero-lily { width: 150px; height: 150px; bottom: -20px; }
+  .hero h1 { font-size: 28px; }
+  .hero-buttons { flex-wrap: wrap; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .welcome-row { grid-template-columns: 1fr; }
+}

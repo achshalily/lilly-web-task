@@ -1,0 +1,112 @@
+/* ---- Colors, taken from the sage green + dusty rose watercolor mood board ---- */
+:root {
+  --cream: #F5F1E6;        /* parchment background */
+  --sage: #A9B99B;         /* soft sage green */
+  --sage-dark: #71835F;    /* deeper sage for text/buttons */
+  --rose: #E3A6B4;         /* dusty pink */
+  --rose-deep: #C06B85;    /* deeper rose - flowers, accents */
+  --wine: #6E3E4C;         /* deep wine - headings, contrast text */
+  --gold: #C9A227;         /* small sparkle accent */
+  --ink: #3A332E;          /* main body text, warm near-black */
+  --grey: #7A7167;
+  --white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  color: var(--ink);
+  background: var(--cream);
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 15px 0;
+  font-weight: 700;
+  color: var(--wine);
+}
+
+/* the big soft script word used behind hero content - our signature touch */
+.script-word {
+  font-family: 'Yesteryear', cursive;
+  font-weight: 400;
+  color: var(--rose-deep);
+}
+
+p {
+  line-height: 1.7;
+  color: var(--grey);
+  margin: 0 0 15px 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+section {
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---- Reusable button ---- */
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  border: 2px solid var(--wine);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--wine);
+  color: var(--cream);
+}
+.btn-primary:hover {
+  background: var(--sage-dark);
+  border-color: var(--sage-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--wine);
+}
+.btn-outline:hover {
+  background: var(--wine);
+  color: var(--cream);
+}
+
+/* ---- Small label used above headings ---- */
+.tag {
+  display: inline-block;
+  color: var(--sage-dark);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--rose);
+  margin-bottom: 18px;
+}
+
+@media (max-width: 700px) {
+  section { padding: 40px 0; }
+}
